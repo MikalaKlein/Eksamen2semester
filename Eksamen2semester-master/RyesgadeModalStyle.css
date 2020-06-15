@@ -1,0 +1,221 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	font-family: "Sans-sherif";
+	font-size: 17px;	
+}
+
+.wrapper {
+	display: grid;
+	grid-template-columns: repeat(12, [col-start] 1fr);
+}
+
+/* Styling af indholdet i sectionen på forsiden starter her */
+.Covid19 {
+	  grid-column: 4 / span 6;
+	  grid-row: 7 / span 4;
+	  background-color: #F7ECD8;
+	  border: 2px solid #CDB59D;
+	  border-radius: 19px;
+	  padding: 50px;
+	  margin-top: 70px;
+	  display: grid;
+}
+
+.Overskrift {
+	 grid-column: 8 / span 8;
+	 grid-row: 2 / span 2;
+	 line-height: 1.8;
+     font-family: Arial;
+	 margin: 20px;
+}
+.P1 {
+	 grid-column: 8 / span 2;
+     grid-row: 5 / span 2;
+	 line-height: 1.8;
+     font-family: Arial;
+	 margin: 20px;
+	
+}
+
+.P2 {
+	 grid-column: 8 / span 2;
+     grid-row: 8 / span 2;
+	 line-height: 1.8;
+     font-family: Arial;
+	 margin: 20px;  
+}
+
+.P2 u {
+	color: #73BDDC; 
+}
+/*styling af knappen som modalen er forbundet til */
+.button{
+  grid-column: 8 / span 1;
+  grid-row: 11 / span 2;
+  background-color: #73BDDC;
+  border: 2px solid #FFFFFF;
+  border-radius: 25px;
+  color: #FFFFFF;
+  padding: 15px 40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 20px 2px;
+  cursor: pointer;
+  
+}
+
+
+/*knappens hover, når man har mussen henover */
+.button:hover{
+	background-color: #CDB59D;
+}
+
+/* Styling af modalen */
+.modal {
+	position: fixed;
+	z-index:1;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	overflow: auto;
+	background-color: rgba(0,0,0,0.5);
+	display: grid;
+}
+
+/*styling af modalens indhold */
+.modal-content {
+	grid-column: 1 / span 12;
+	background-color: #f7ecd8;
+	border: 2px solid #cdb59d;
+	border-radius: 19px;
+	margin: 10% auto;
+	width: 50%;
+	box-shadow: 0 5px 8px 0 rbga(0,0,0,0.2), 0 7px 20px 0 rgba(0,0,0.17);
+	display:grid;
+}
+
+.modal-header{
+	grid-column: 2 / span 4;
+	grid-row: 1 / span 1;
+	font-family: "calibri";
+	color: #FFFFFF;
+	padding-left: 10px;
+	float: left;
+}
+
+/* Styling af sektionen som closeBtn er placeret i */
+.header {
+	grid-column: 1 / span 12; 
+	grid-row: 1 / span 1;
+	z-index: 1;
+	
+}
+
+
+/* tekst indhold */
+#Foorstelinje {
+	grid-column: 3 / span 2;
+	grid-row: 3 / span 1;
+	margin: 30px 0px 0px 50px;
+	font-size: 20px; 
+    line-height: 1.8;
+    font-family: Arial;
+}
+
+/* tekst indhold */
+#Andenlinje {
+	grid-column: 3 / span 8; 
+	grid-row: 5 / span 1;
+	font-size: 20px; 
+	line-height: 1.8;
+    font-family: Arial;
+}
+
+/* Et afsnit i teksten er sat op som en liste og derfor hedder dots */ 
+.dots {
+	grid-column: 3 / span 2; 
+	grid-row: 7 / span 1;
+	margin: 30px 80px 0px 80px;
+	font-size: 20px; 
+	line-height: 1.8;
+    font-family: Arial;
+}
+
+#Andenlinje u {
+	color: #73BDDC;
+}
+/* tekst indhold */
+#Tredjelinje {
+	grid-column: 3 / span 2; 
+	grid-row: 9 / span 1;
+	margin: 50px;
+	font-size: 20px; 
+	line-height: 1.8;
+    font-family: Arial;
+}
+/* tekst indhold */
+#Fjerdelinje {
+	grid-column: 3 / span 1; 
+	grid-row: 11 / span 1;
+	margin: 0px 0px 0px 50px;
+	line-height: 1.8;
+    font-family: Arial;
+	font-size: 20px; 
+}
+/* tekst indhold */
+#Femtelinje {
+	grid-column: 3 / span 1; 
+	grid-row: 13 / span 1;
+	margin: 30px 0px 0px 50px;
+	line-height: 1.8;
+    font-family: Arial;
+	font-size: 20px; 
+}
+/* tekst indhold */
+#Sjettelinje {
+	grid-column: 3 / span 1; 
+	grid-row: 15 / span 1;
+	margin: 0px 0px 40px 50px;
+	line-height: 1.8;
+    font-family: Arial; 
+	font-size: 20px; 
+
+}
+
+.link{
+	grid-column: 4 / span 2; 
+	grid-row: 7 / span 1;
+	line-height: 1.8;
+    font-family: Arial; 
+	font-size: 20px; 
+}
+/* closeBtn er krydset i højre hjørne og dette er stylingen af den */
+.closeBtn{
+	float: right;
+	padding-right: 30px;
+	padding-top: 25px;
+    color: #000000;
+	font-size: 30px;
+	
+}
+/*closeBtn hover, dvs. hoveren der sker når du holder mussen henover */
+.closeBtn:hover,.closeBtn:focus{
+	color: #73bddc;
+	text-decoration: none; 
+	cursor:pointer;
+
+}
+
+
+
+
+
+
+
+
+

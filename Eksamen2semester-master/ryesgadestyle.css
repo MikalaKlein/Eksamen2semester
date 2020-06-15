@@ -5,50 +5,58 @@
 .wrapper {
 	display: grid;
 	grid-template-columns: repeat(12, [col-start] 1fr);
-	
 } 
 
-.header {
-	display: grid;
+.head {
 	grid-column: 1 / span 12;
 	grid-row: 1 / span 1;
-	padding: 10px;
 	background-color: #73BDDC;
+	display: grid;
+}
+
+#Logosection{
+	grid-column: 1 / span 4;
 }
 
 .logo {
-	grid-column: 1 / span 1;
-	margin-left: 20px;
-	width: 50%;
+	float: left;
+	margin: 20px 0px 20px 20px;
+	width: 15%;
 }
 
-.header h2 {
-	grid-column: 2 / span 2;
-	font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, "serif";
-	color: white;
-	margin-top: 60px;
+#TekstLogo{
+	padding-top: 100px;
+	color: #FFFFFF;
+	font-family:Georgia;
+	font-size: 25px;
+}
+	
+	
+
+.kontaktinfo{
+	grid-column: 8 / span 4;
+	color: #FFFFFF;
+	font-family: Arial;
+	font-size: 20px;
+}
+
+#tlf{
 	float: left;
+	padding-top: 100px;
 	
 }
 
-.telefon {
-	grid-column: 10 / span 1; 
-	font-family: arial;
-	margin-top: 70px;
-	color: white;
-		
+#email{
+	float: right;
+	padding-right: 20px;
+	padding-top: 100px;
 }
-.email {
-	grid-column: 11 / span 1;
-	font-family: arial;
-	margin-top: 70px;
-	color: white;
-}
-
 .navbar {
 	grid-column: 1 / span 12;
+	grid-row: 2 / span 1;
 	overflow: hidden;
     background-color: #454545;
+	Border: 1px solid #454545;
 	padding-left: 30px;
 	
 }
@@ -70,24 +78,26 @@
   float: left;
   overflow: hidden;
   font-family: Arial;
-  Border: 1px solid #454545;
   font-size: 20px;
+  border: 1px solid #454545;
+  
 }
 
 .dropdown .dropbtn {
   font-size: 20px;  
-  Border: none;
-  outline: none;
   color: #73BDDC;
   padding: 20px 16px;
   background-color: inherit;
   font-family: inherit;
+  border: 1px solid #454545;
   margin: 0;
 }
 
-.navbar a:hover, .dropdown:hover .dropbtn {
+.navbar a:hover, .dropdown:hover .dropbtn:hover {
   background-color: #454545;
-  Border: 1px solid #73BDDC;
+  border-color: #73BDDC;
+  
+ 
  
 	
 }
@@ -149,37 +159,224 @@ li a:hover {
 .coverbillede {
 	grid-column: 1 / span 12;
 	grid-row: 4 / span 2;
-	padding: 220px;
-	background: url("Redigerede Billeder - dyreklinik-20200602T211051Z-001/mai_og_kat@2x.png");
+	padding: 30em;
+	background: url("billeder/maimedhund.png");
 	background-repeat: no-repeat;
-	background-size: 100% 100%;
+	background-size: 100%;
+	
+}
+/*
+.Covid19 {
+	  grid-column: 4 / span 6;
+	  grid-row: 7 / span 4;
+	  background-color: #F7ECD8;
+	  border: 2px solid #CDB59D;
+	  border-radius: 19px;
+	  padding: 50px;
+	  margin-top: 70px;
+	  display: grid;
+}
+
+.Overskrift {
+	 grid-column: 8 / span 8;
+	 grid-row: 2 / span 2;
+	 line-height: 1.8;
+     font-family: Arial;
+	 margin: 20px;
+}
+.P1 {
+	 grid-column: 8 / span 2;
+     grid-row: 5 / span 2;
+	 line-height: 1.8;
+     font-family: Arial;
+	 margin: 20px;
 	
 }
 
-.Covid19 {
-  grid-column: 2 / span 10;
-  grid-row: 7 / span 2;
-  background-color: #F7ECD8;
-  border: 2px solid #CDB59D;
-  border-radius: 19px;
-  padding: 50px;
-  margin-top: 70px;
-  
+.P2 {
+	 grid-column: 8 / span 2;
+     grid-row: 8 / span 2;
+	 line-height: 1.8;
+     font-family: Arial;
+	 margin: 20px;  
+}
+
+.P2 u {
+	color: #73BDDC; 
+}
+
+
+// Modal 
+.button{
+  grid-column: 8 / span 1;
+  grid-row: 11 / span 2;
+  background-color: #73BDDC;
+  border: 2px solid #FFFFFF;
+  border-radius: 25px;
+  color: #FFFFFF;
+  padding: 15px 40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 20px 2px;
+  cursor: pointer;
   
 }
 
-.Covid19 h3 {
-	 line-height: 1.8;
-     font-family: Arial;
+
+
+.button:hover{
+	background-color: #CDB59D;
 }
-.Covid19 p {
-	 line-height: 1.8;
-     font-family: Arial;
+
+.modal {
+	position: fixed;
+	z-index:1;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	overflow: auto;
+	background-color: rgba(0,0,0,0.5);
+	display: none;
 }
+
+.modal-content {
+	grid-column: 1 / span 12;
+	background-color: #f7ecd8;
+	border: 2px solid #cdb59d;
+	border-radius: 19px;
+	margin: 10% auto;
+	width: 50%;
+	box-shadow: 0 5px 8px 0 rbga(0,0,0,0.2), 0 7px 20px 0 rgba(0,0,0.17);
+	display:grid;
+}
+/*
+.modal-header{
+	grid-column: 2 / span 4;
+	grid-row: 1 / span 1;
+	font-family: "calibri";
+	color: #FFFFFF;
+	padding-left: 10px;
+	float: left;
+}
+
+
+
+// Header
+.header {
+	grid-column: 1 / span 12; 
+	grid-row: 1 / span 1;
+	z-index: 1;
+	
+}
+
+
+
+#Foorstelinje {
+	grid-column: 3 / span 2;
+	grid-row: 3 / span 1;
+	margin: 30px 0px 0px 50px;
+	font-size: 20px; 
+    line-height: 1.8;
+    font-family: Arial;
+}
+
+#Andenlinje {
+	grid-column: 3 / span 8; 
+	grid-row: 5 / span 1;
+	font-size: 20px; 
+	line-height: 1.8;
+    font-family: Arial;
+}
+
+.dots {
+	grid-column: 3 / span 2; 
+	grid-row: 7 / span 1;
+	margin: 30px 80px 0px 80px;
+	font-size: 20px; 
+	line-height: 1.8;
+    font-family: Arial;
+}
+
+#Andenlinje u {
+	color: #73BDDC;
+}
+
+#Tredjelinje {
+	grid-column: 3 / span 2; 
+	grid-row: 9 / span 1;
+	margin: 50px;
+	font-size: 20px; 
+	line-height: 1.8;
+    font-family: Arial;
+}
+
+#Fjerdelinje {
+	grid-column: 3 / span 1; 
+	grid-row: 11 / span 1;
+	margin: 0px 0px 0px 50px;
+	line-height: 1.8;
+    font-family: Arial;
+	font-size: 20px; 
+}
+
+#Femtelinje {
+	grid-column: 3 / span 1; 
+	grid-row: 13 / span 1;
+	margin: 30px 0px 0px 50px;
+	line-height: 1.8;
+    font-family: Arial;
+	font-size: 20px; 
+}
+
+#Sjettelinje {
+	grid-column: 3 / span 1; 
+	grid-row: 15 / span 1;
+	margin: 0px 0px 40px 50px;
+	line-height: 1.8;
+    font-family: Arial; 
+	font-size: 20px; 
+
+}
+
+.link{
+	grid-column: 4 / span 2; 
+	grid-row: 7 / span 1;
+	line-height: 1.8;
+    font-family: Arial; 
+	font-size: 20px; 
+}
+
+.closeBtn{
+	float: right;
+	padding-right: 30px;
+	padding-top: 25px;
+    color: #000000;
+	font-size: 30px;
+	
+}
+
+.closeBtn:hover,.closeBtn:focus{
+	color: #73bddc;
+	text-decoration: none; 
+	cursor:pointer;
+
+}
+
+*/
+
+
+
+
+
+
+
 
 .DinLokaleDyrlaage {
 	grid-column: 2 / span 10;
-	grid-row: 10 / span 2;
+	grid-row: 12 / span 2;
 	Background-color: #73BDDC;
 	border-radius: 19px;
 	padding: 50px;
@@ -218,7 +415,7 @@ li a:hover {
 
 .beliggenhed {
 	grid-column: 2 / span 10;
-	grid-row: 13 / span 2;
+	grid-row: 15 / span 2;
 	line-height: 1.8;
 	font-family: Arial;
 	color:#000000;
@@ -239,7 +436,7 @@ li a:hover {
 
 .billede1 {
 	grid-column: 2 / span 3;
-	grid-row: 16 / span 2;
+	grid-row: 18 / span 2;
 	Background-color: #73BDDC;
 	border-radius: 19px;
 	margin: 0px 10px 0px 10px;
@@ -275,7 +472,7 @@ li a:hover {
 	
 }
 
-.button {
+.button1 {
   grid-column: 2 / span 1;
   grid-row: 5 / span 1;
   background-color: #73BDDC;
@@ -290,7 +487,7 @@ li a:hover {
   margin: 70px 2px;
   cursor: pointer;
 }
-.button:hover {
+.button1:hover {
 	background-color: #CDB59D;
 	border: 2px solid #FFFFFF;
 }
@@ -303,7 +500,7 @@ li a:hover {
 
 .billede2 {
 	grid-column: 5 / span 4;
-	grid-row: 16 / span 2;
+	grid-row: 18 / span 2;
 	Background-color: #73BDDC;
 	color: #FFFFFF;
 	border-radius: 19px;
@@ -367,7 +564,7 @@ li a:hover {
 
 .billede3 {
 	grid-column: 9 / span 3;
-	grid-row: 16 / span 1;
+	grid-row: 18 / span 1;
 	Background-color: #73BDDC;
 	color: #FFFFFF;
 	border-radius: 19px;
@@ -437,7 +634,7 @@ li a:hover {
   display: grid;
 }
 
-ul.a {
+.a {
 	grid-column: 1 / span 2;
 	grid-row: 1 / span 2;
 	list-style-type: circle;
@@ -449,7 +646,7 @@ ul.a {
 
 
 
-ul.b {
+.b {
 	grid-column: 10 / span 2;
 	list-style-type: circle;
 	color: #FFFFFF;
